@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SidebarLayout from "@/components/SidebarLayout";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "SMCH - AI Social Engine",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <SidebarLayout>{children}</SidebarLayout>
+        <SpeedInsights />
       </body>
     </html>
   );
